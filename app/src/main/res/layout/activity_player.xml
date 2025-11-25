@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootPlayer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context=".PlayerActivity">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tvStationTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="BBC"
+            android:textFontWeight="@integer/material_motion_duration_long_2"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/btnPause"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="4dp"
+            android:scaleType="fitCenter"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/playing_bar"
+            app:tint="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Station Image -->
+    <ImageView
+        android:id="@+id/imgStation"
+        android:layout_width="280dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bcc" />
+
+    <!-- Station Subtitle -->
+    <TextView
+        android:id="@+id/tvStationSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgStation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="BBC Radio"
+        android:textColor="#e8e9e9"
+        android:textSize="16sp" />
+
+    <!-- Play/Stop Button -->
+    <ImageButton
+        android:id="@+id/btnPlayPause"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_below="@id/tvStationSubtitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:padding="14sp"
+        android:scaleType="centerInside"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_stop"/>
+
+    <!-- Volume SeekBar Row (icon + seekbar + icon) -->
+    <LinearLayout
+        android:id="@+id/volumeRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnPlayPause"
+        android:layout_marginTop="28dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp">
+
+        <ImageView
+            android:id="@+id/imgMute"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_volume_off"
+            app:tint="@android:color/white" />
+
+        <SeekBar
+            android:id="@+id/seekVolume"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:thumbTint="@android:color/white"
+            android:progressTint="@android:color/white"
+            android:splitTrack="false" />
+
+        <ImageView
+            android:id="@+id/imgVolume"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/ic_volume_up"
+            app:tint="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Now Playing Title -->
+    <TextView
+        android:id="@+id/tvNowPlayingTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/volumeRow"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:text="BBC World Service Online"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp" />
+
+    <!-- Now Playing Subtitle -->
+    <TextView
+        android:id="@+id/tvNowPlayingSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvNowPlayingTitle"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="BBC World Service Online"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp" />
+
+    <!-- Bottom Icons -->
+    <LinearLayout
+        android:id="@+id/bottomIcons"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp"
+        android:paddingStart="24dp">
+
+
+
+        <ImageButton
+            android:id="@+id/btnShare"
+            android:layout_width="32dp"
+            android:layout_height="25dp"
+            android:scaleType="centerInside"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_share" />
+
+        <ImageButton
+            android:id="@+id/btnInfo"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:scaleType="centerInside"
+            android:padding="3dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_info"
+            app:tint="@android:color/white" />
+    </LinearLayout>
+
+</RelativeLayout>
