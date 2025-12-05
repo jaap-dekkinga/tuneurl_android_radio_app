@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    android:id="@+id/main"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/playingNow"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginVertical="12dp"
+        android:layout_marginEnd="-10dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/now_playing"
+        app:tint="#d9d9d9" />
+
+    <!-- Top Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TuneURL Radio"
+        android:layout_below="@+id/playingNow"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="8dp" />
+
+    <!-- RecyclerView for stations -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerStations"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvTitle"
+        android:layout_above="@id/layoutNowPlaying"
+        android:layout_marginTop="5dp"
+        android:paddingHorizontal="2dp"
+        android:clipToPadding="false"
+        tools:listitem="@layout/item_station_card" />
+
+    <!-- Bottom Now Playing bar -->
+    <LinearLayout
+        android:id="@+id/layoutNowPlaying"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="#060606">
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNowPlayingTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="offline - LibreTime"
+                android:textColor="#a2a2a2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvNowPlayingSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test TuneURL Station"
+                android:layout_marginTop="2dp"
+                android:textColor="#a1a1a1"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgNowPlayingBars"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/station_image" />
+    </LinearLayout>
+
+</RelativeLayout>
