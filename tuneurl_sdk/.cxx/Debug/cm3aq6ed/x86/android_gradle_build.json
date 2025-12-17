@@ -1,0 +1,40 @@
+{
+  "stringTable": {},
+  "buildFiles": [
+    "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/pro/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+      "-C",
+      "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/.cxx/Debug/cm3aq6ed/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/pro/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+    "-C",
+    "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/.cxx/Debug/cm3aq6ed/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "native-lib-Debug-x86": {
+      "buildCommandComponents": [
+        "/Users/pro/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/.cxx/Debug/cm3aq6ed/x86",
+        "native-lib"
+      ],
+      "buildType": "debug",
+      "abi": "x86",
+      "artifactName": "native-lib",
+      "output": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/build/intermediates/cxx/Debug/cm3aq6ed/obj/x86/libnative-lib.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {},
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

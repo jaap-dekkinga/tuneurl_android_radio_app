@@ -1,0 +1,79 @@
+[
+{
+  "directory": "D:/Android/Workspace/TuneURL_SDK/tuneurl_sdk/.cxx/RelWithDebInfo/3j4z2v5o/x86",
+  "command": "D:\\Android\\Old_NDKs\\android-ndk-r17c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=i686-none-linux-android --gcc-toolchain=D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=D:/Android/Old_NDKs/android-ndk-r17c/sysroot  -Dnative_lib_EXPORTS -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/android/support/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include  -isystem D:/Android/Old_NDKs/android-ndk-r17c/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=26 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O2 -g -DNDEBUG -fPIC   -o CMakeFiles\\native-lib.dir\\native-lib.cpp.o -c D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\native-lib.cpp",
+  "file": "D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\native-lib.cpp"
+},
+
+{
+  "directory": "D:/Android/Workspace/TuneURL_SDK/tuneurl_sdk/.cxx/RelWithDebInfo/3j4z2v5o/x86",
+  "command": "D:\\Android\\Old_NDKs\\android-ndk-r17c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=i686-none-linux-android --gcc-toolchain=D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=D:/Android/Old_NDKs/android-ndk-r17c/sysroot  -Dnative_lib_EXPORTS -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/android/support/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include  -isystem D:/Android/Old_NDKs/android-ndk-r17c/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=26 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O2 -g -DNDEBUG -fPIC   -o CMakeFiles\\native-lib.dir\\Fingerprint.cpp.o -c D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\Fingerprint.cpp",
+  "file": "D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\Fingerprint.cpp"
+},
+
+{
+  "directory": "D:/Android/Workspace/TuneURL_SDK/tuneurl_sdk/.cxx/RelWithDebInfo/3j4z2v5o/x86",
+  "command": "D:\\Android\\Old_NDKs\\android-ndk-r17c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=i686-none-linux-android --gcc-toolchain=D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=D:/Android/Old_NDKs/android-ndk-r17c/sysroot  -Dnative_lib_EXPORTS -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/android/support/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include  -isystem D:/Android/Old_NDKs/android-ndk-r17c/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=26 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O2 -g -DNDEBUG -fPIC   -o CMakeFiles\\native-lib.dir\\FingerprintManager.cpp.o -c D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\FingerprintManager.cpp",
+  "file": "D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\FingerprintManager.cpp"
+},
+
+{
+  "directory": "D:/Android/Workspace/TuneURL_SDK/tuneurl_sdk/.cxx/RelWithDebInfo/3j4z2v5o/x86",
+  "command": "D:\\Android\\Old_NDKs\\android-ndk-r17c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=i686-none-linux-android --gcc-toolchain=D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=D:/Android/Old_NDKs/android-ndk-r17c/sysroot  -Dnative_lib_EXPORTS -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/android/support/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include  -isystem D:/Android/Old_NDKs/android-ndk-r17c/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=26 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O2 -g -DNDEBUG -fPIC   -o CMakeFiles\\native-lib.dir\\RobustIntensityProcessor.cpp.o -c D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\RobustIntensityProcessor.cpp",
+  "file": "D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\RobustIntensityProcessor.cpp"
+},
+
+{
+  "directory": "D:/Android/Workspace/TuneURL_SDK/tuneurl_sdk/.cxx/RelWithDebInfo/3j4z2v5o/x86",
+  "command": "D:\\Android\\Old_NDKs\\android-ndk-r17c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=i686-none-linux-android --gcc-toolchain=D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=D:/Android/Old_NDKs/android-ndk-r17c/sysroot  -Dnative_lib_EXPORTS -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/android/support/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include  -isystem D:/Android/Old_NDKs/android-ndk-r17c/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=26 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O2 -g -DNDEBUG -fPIC   -o CMakeFiles\\native-lib.dir\\ArrayRankFloat.cpp.o -c D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\ArrayRankFloat.cpp",
+  "file": "D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\ArrayRankFloat.cpp"
+},
+
+{
+  "directory": "D:/Android/Workspace/TuneURL_SDK/tuneurl_sdk/.cxx/RelWithDebInfo/3j4z2v5o/x86",
+  "command": "D:\\Android\\Old_NDKs\\android-ndk-r17c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=i686-none-linux-android --gcc-toolchain=D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=D:/Android/Old_NDKs/android-ndk-r17c/sysroot  -Dnative_lib_EXPORTS -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/android/support/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include  -isystem D:/Android/Old_NDKs/android-ndk-r17c/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=26 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O2 -g -DNDEBUG -fPIC   -o CMakeFiles\\native-lib.dir\\FingerprintProperties.cpp.o -c D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\FingerprintProperties.cpp",
+  "file": "D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\FingerprintProperties.cpp"
+},
+
+{
+  "directory": "D:/Android/Workspace/TuneURL_SDK/tuneurl_sdk/.cxx/RelWithDebInfo/3j4z2v5o/x86",
+  "command": "D:\\Android\\Old_NDKs\\android-ndk-r17c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=i686-none-linux-android --gcc-toolchain=D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=D:/Android/Old_NDKs/android-ndk-r17c/sysroot  -Dnative_lib_EXPORTS -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/android/support/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include  -isystem D:/Android/Old_NDKs/android-ndk-r17c/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=26 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O2 -g -DNDEBUG -fPIC   -o CMakeFiles\\native-lib.dir\\Spectrogram.cpp.o -c D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\Spectrogram.cpp",
+  "file": "D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\Spectrogram.cpp"
+},
+
+{
+  "directory": "D:/Android/Workspace/TuneURL_SDK/tuneurl_sdk/.cxx/RelWithDebInfo/3j4z2v5o/x86",
+  "command": "D:\\Android\\Old_NDKs\\android-ndk-r17c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=i686-none-linux-android --gcc-toolchain=D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=D:/Android/Old_NDKs/android-ndk-r17c/sysroot  -Dnative_lib_EXPORTS -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/android/support/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include  -isystem D:/Android/Old_NDKs/android-ndk-r17c/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=26 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O2 -g -DNDEBUG -fPIC   -o CMakeFiles\\native-lib.dir\\FastFourierTransform.cpp.o -c D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\FastFourierTransform.cpp",
+  "file": "D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\FastFourierTransform.cpp"
+},
+
+{
+  "directory": "D:/Android/Workspace/TuneURL_SDK/tuneurl_sdk/.cxx/RelWithDebInfo/3j4z2v5o/x86",
+  "command": "D:\\Android\\Old_NDKs\\android-ndk-r17c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=i686-none-linux-android --gcc-toolchain=D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=D:/Android/Old_NDKs/android-ndk-r17c/sysroot  -Dnative_lib_EXPORTS -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/android/support/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include  -isystem D:/Android/Old_NDKs/android-ndk-r17c/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=26 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O2 -g -DNDEBUG -fPIC   -o CMakeFiles\\native-lib.dir\\WindowFunction.cpp.o -c D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\WindowFunction.cpp",
+  "file": "D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\WindowFunction.cpp"
+},
+
+{
+  "directory": "D:/Android/Workspace/TuneURL_SDK/tuneurl_sdk/.cxx/RelWithDebInfo/3j4z2v5o/x86",
+  "command": "D:\\Android\\Old_NDKs\\android-ndk-r17c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=i686-none-linux-android --gcc-toolchain=D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=D:/Android/Old_NDKs/android-ndk-r17c/sysroot  -Dnative_lib_EXPORTS -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/android/support/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include  -isystem D:/Android/Old_NDKs/android-ndk-r17c/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=26 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O2 -g -DNDEBUG -fPIC   -o CMakeFiles\\native-lib.dir\\FingerprintSimilarityComputer.cpp.o -c D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\FingerprintSimilarityComputer.cpp",
+  "file": "D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\FingerprintSimilarityComputer.cpp"
+},
+
+{
+  "directory": "D:/Android/Workspace/TuneURL_SDK/tuneurl_sdk/.cxx/RelWithDebInfo/3j4z2v5o/x86",
+  "command": "D:\\Android\\Old_NDKs\\android-ndk-r17c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=i686-none-linux-android --gcc-toolchain=D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=D:/Android/Old_NDKs/android-ndk-r17c/sysroot  -Dnative_lib_EXPORTS -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/android/support/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include  -isystem D:/Android/Old_NDKs/android-ndk-r17c/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=26 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O2 -g -DNDEBUG -fPIC   -o CMakeFiles\\native-lib.dir\\MapRankInteger.cpp.o -c D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\MapRankInteger.cpp",
+  "file": "D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\MapRankInteger.cpp"
+},
+
+{
+  "directory": "D:/Android/Workspace/TuneURL_SDK/tuneurl_sdk/.cxx/RelWithDebInfo/3j4z2v5o/x86",
+  "command": "D:\\Android\\Old_NDKs\\android-ndk-r17c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=i686-none-linux-android --gcc-toolchain=D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=D:/Android/Old_NDKs/android-ndk-r17c/sysroot  -Dnative_lib_EXPORTS -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/android/support/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include  -isystem D:/Android/Old_NDKs/android-ndk-r17c/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=26 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O2 -g -DNDEBUG -fPIC   -o CMakeFiles\\native-lib.dir\\PairManager.cpp.o -c D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\PairManager.cpp",
+  "file": "D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\PairManager.cpp"
+},
+
+{
+  "directory": "D:/Android/Workspace/TuneURL_SDK/tuneurl_sdk/.cxx/RelWithDebInfo/3j4z2v5o/x86",
+  "command": "D:\\Android\\Old_NDKs\\android-ndk-r17c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=i686-none-linux-android --gcc-toolchain=D:/Android/Old_NDKs/android-ndk-r17c/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=D:/Android/Old_NDKs/android-ndk-r17c/sysroot  -Dnative_lib_EXPORTS -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/android/support/include -isystem D:/Android/Old_NDKs/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include  -isystem D:/Android/Old_NDKs/android-ndk-r17c/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=26 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O2 -g -DNDEBUG -fPIC   -o CMakeFiles\\native-lib.dir\\QuickSortInteger.cpp.o -c D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\QuickSortInteger.cpp",
+  "file": "D:\\Android\\Workspace\\TuneURL_SDK\\tuneurl_sdk\\cpp\\QuickSortInteger.cpp"
+}
+]

@@ -1,0 +1,40 @@
+{
+  "stringTable": {},
+  "buildFiles": [
+    "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/pro/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+      "-C",
+      "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/.cxx/Debug/2f151f1w/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/pro/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+    "-C",
+    "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/.cxx/Debug/2f151f1w/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "native-lib-Debug-arm64-v8a": {
+      "buildCommandComponents": [
+        "/Users/pro/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/.cxx/Debug/2f151f1w/arm64-v8a",
+        "native-lib"
+      ],
+      "buildType": "debug",
+      "abi": "arm64-v8a",
+      "artifactName": "native-lib",
+      "output": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/build/intermediates/cxx/Debug/2f151f1w/obj/arm64-v8a/libnative-lib.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {},
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

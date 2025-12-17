@@ -1,0 +1,3 @@
+D:/Android/Workspace/TuneURL_SDK/tuneurl_sdk/.cxx/RelWithDebInfo/3j4z2v5o/x86/CMakeFiles/native-lib.dir
+D:/Android/Workspace/TuneURL_SDK/tuneurl_sdk/.cxx/RelWithDebInfo/3j4z2v5o/x86/CMakeFiles/edit_cache.dir
+D:/Android/Workspace/TuneURL_SDK/tuneurl_sdk/.cxx/RelWithDebInfo/3j4z2v5o/x86/CMakeFiles/rebuild_cache.dir

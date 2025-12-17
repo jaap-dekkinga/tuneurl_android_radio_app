@@ -668,6 +668,7 @@ object CollectionHelper {
             Keys.EXTRA_COLLECTION_MODIFICATION_DATE,
             modificationDate.time
         )
+        collectionChangedIntent.setPackage(context.packageName)
         LocalBroadcastManager.getInstance(context).sendBroadcast(collectionChangedIntent)
     }
 

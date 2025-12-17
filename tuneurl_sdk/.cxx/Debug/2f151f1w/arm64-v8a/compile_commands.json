@@ -1,0 +1,79 @@
+[
+{
+  "directory": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/.cxx/Debug/2f151f1w/arm64-v8a",
+  "command": "/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android26 --sysroot=/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/native-lib.cpp.o -c /Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/native-lib.cpp",
+  "file": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/native-lib.cpp"
+},
+
+{
+  "directory": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/.cxx/Debug/2f151f1w/arm64-v8a",
+  "command": "/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android26 --sysroot=/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/Fingerprint.cpp.o -c /Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/Fingerprint.cpp",
+  "file": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/Fingerprint.cpp"
+},
+
+{
+  "directory": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/.cxx/Debug/2f151f1w/arm64-v8a",
+  "command": "/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android26 --sysroot=/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/FingerprintManager.cpp.o -c /Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/FingerprintManager.cpp",
+  "file": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/FingerprintManager.cpp"
+},
+
+{
+  "directory": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/.cxx/Debug/2f151f1w/arm64-v8a",
+  "command": "/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android26 --sysroot=/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/RobustIntensityProcessor.cpp.o -c /Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/RobustIntensityProcessor.cpp",
+  "file": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/RobustIntensityProcessor.cpp"
+},
+
+{
+  "directory": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/.cxx/Debug/2f151f1w/arm64-v8a",
+  "command": "/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android26 --sysroot=/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/ArrayRankFloat.cpp.o -c /Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/ArrayRankFloat.cpp",
+  "file": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/ArrayRankFloat.cpp"
+},
+
+{
+  "directory": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/.cxx/Debug/2f151f1w/arm64-v8a",
+  "command": "/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android26 --sysroot=/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/FingerprintProperties.cpp.o -c /Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/FingerprintProperties.cpp",
+  "file": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/FingerprintProperties.cpp"
+},
+
+{
+  "directory": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/.cxx/Debug/2f151f1w/arm64-v8a",
+  "command": "/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android26 --sysroot=/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/Spectrogram.cpp.o -c /Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/Spectrogram.cpp",
+  "file": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/Spectrogram.cpp"
+},
+
+{
+  "directory": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/.cxx/Debug/2f151f1w/arm64-v8a",
+  "command": "/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android26 --sysroot=/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/FastFourierTransform.cpp.o -c /Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/FastFourierTransform.cpp",
+  "file": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/FastFourierTransform.cpp"
+},
+
+{
+  "directory": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/.cxx/Debug/2f151f1w/arm64-v8a",
+  "command": "/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android26 --sysroot=/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/WindowFunction.cpp.o -c /Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/WindowFunction.cpp",
+  "file": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/WindowFunction.cpp"
+},
+
+{
+  "directory": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/.cxx/Debug/2f151f1w/arm64-v8a",
+  "command": "/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android26 --sysroot=/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/FingerprintSimilarityComputer.cpp.o -c /Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/FingerprintSimilarityComputer.cpp",
+  "file": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/FingerprintSimilarityComputer.cpp"
+},
+
+{
+  "directory": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/.cxx/Debug/2f151f1w/arm64-v8a",
+  "command": "/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android26 --sysroot=/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/MapRankInteger.cpp.o -c /Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/MapRankInteger.cpp",
+  "file": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/MapRankInteger.cpp"
+},
+
+{
+  "directory": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/.cxx/Debug/2f151f1w/arm64-v8a",
+  "command": "/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android26 --sysroot=/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/PairManager.cpp.o -c /Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/PairManager.cpp",
+  "file": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/PairManager.cpp"
+},
+
+{
+  "directory": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/.cxx/Debug/2f151f1w/arm64-v8a",
+  "command": "/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android26 --sysroot=/Users/pro/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/QuickSortInteger.cpp.o -c /Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/QuickSortInteger.cpp",
+  "file": "/Users/pro/Documents/android_project/pp_turl_android_update/tuneurl_sdk/cpp/QuickSortInteger.cpp"
+}
+]

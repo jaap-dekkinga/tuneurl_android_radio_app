@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "C:\\Users\\Macrew\\Documents\\tuneurl_android_radio_app\\tuneurl_sdk\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\Macrew\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\Users\\Macrew\\Documents\\tuneurl_android_radio_app\\tuneurl_sdk\\.cxx\\Debug\\306c223r\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\Macrew\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\Users\\Macrew\\Documents\\tuneurl_android_radio_app\\tuneurl_sdk\\.cxx\\Debug\\306c223r\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "native-lib::@6890427a1f51a3e7e1df": {
+      "artifactName": "native-lib",
+      "abi": "x86",
+      "output": "C:\\Users\\Macrew\\Documents\\tuneurl_android_radio_app\\tuneurl_sdk\\build\\intermediates\\cxx\\Debug\\306c223r\\obj\\x86\\libnative-lib.so",
+      "runtimeFiles": []
+    }
+  }
+}

@@ -14,7 +14,7 @@ import com.tuneurl.radio.core.Station
  * Created by ramasheesh.y@macrew.net$ on 12-11-2025$.
  */
 
-class StationAdapter(private val stations: List<Station>) :
+class StationAdapter(private val stations: List<Station>,val callback:((Station)-> Unit)) :
     RecyclerView.Adapter<StationAdapter.StationViewHolder>() {
 
     inner class StationViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -66,7 +66,12 @@ class StationAdapter(private val stations: List<Station>) :
         }
 
         holder.itemView.setOnClickListener {
+            val isLastItem = selectedItem?.uuid == item.uuid
+            selectedItem=item
+            callback.invoke(item)
             val intent = Intent(context, PlayerActivity::class.java)
+            intent.action = Keys.ACTION_START
+            if (isLastItem) intent.putExtra(Keys.EXTRA_START_LAST_PLAYED_STATION,true)
             intent.putExtra("name", item.name)
             intent.putExtra("uuid", item.uuid)
             intent.putExtra("streamURL", item.getStreamUri())
@@ -74,8 +79,10 @@ class StationAdapter(private val stations: List<Station>) :
             intent.putExtra("desc", item.desc)
             intent.putExtra("longDesc", item.longDesc)
             context.startActivity(intent)
+
         }
     }
 
+    var selectedItem : Station?=null
     override fun getItemCount(): Int = stations.size
 }

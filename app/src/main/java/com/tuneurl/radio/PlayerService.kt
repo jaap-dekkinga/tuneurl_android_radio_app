@@ -16,7 +16,11 @@ package com.tuneurl.radio
 
 import android.app.PendingIntent
 import android.app.TaskStackBuilder
-import android.content.*
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
+import android.content.SharedPreferences
 import android.media.audiofx.AudioEffect
 import android.os.Build
 import android.os.Bundle
@@ -24,7 +28,13 @@ import android.os.CountDownTimer
 import android.util.Log
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.media.MediaBrowserServiceCompat.BrowserRoot.EXTRA_RECENT
-import androidx.media3.common.*
+import androidx.media3.common.AudioAttributes
+import androidx.media3.common.C
+import androidx.media3.common.ForwardingPlayer
+import androidx.media3.common.MediaItem
+import androidx.media3.common.Metadata
+import androidx.media3.common.PlaybackException
+import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.HttpDataSource
 import androidx.media3.exoplayer.DefaultLoadControl
@@ -34,7 +44,17 @@ import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
 import androidx.media3.exoplayer.upstream.DefaultAllocator
 import androidx.media3.exoplayer.upstream.DefaultLoadErrorHandlingPolicy
 import androidx.media3.exoplayer.upstream.LoadErrorHandlingPolicy
-import androidx.media3.session.*
+import androidx.media3.session.CommandButton
+import androidx.media3.session.DefaultMediaNotificationProvider
+import androidx.media3.session.LibraryResult
+import androidx.media3.session.MediaLibraryService
+import androidx.media3.session.MediaSession
+import androidx.media3.session.SessionCommand
+import androidx.media3.session.SessionCommands
+import androidx.media3.session.SessionResult
+import com.dekidea.tuneurl.receiver.TuneURLReceiver
+import com.dekidea.tuneurl.util.Constants
+import com.dekidea.tuneurl.util.TuneURLManager
 import com.google.common.collect.ImmutableList
 import com.google.common.util.concurrent.Futures
 import com.google.common.util.concurrent.ListenableFuture
@@ -43,9 +63,13 @@ import com.tuneurl.radio.helpers.AudioHelper
 import com.tuneurl.radio.helpers.CollectionHelper
 import com.tuneurl.radio.helpers.FileHelper
 import com.tuneurl.radio.helpers.PreferencesHelper
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Deferred
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Dispatchers.Main
-import java.util.*
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
+import java.util.Date
 
 
 /*
@@ -70,7 +94,7 @@ class PlayerService : MediaLibraryService() {
     private var playbackRestartCounter: Int = 0
     private var playLastStation: Boolean = false
     private var manuallyCancelledSleepTimer = false
-
+    private var tuneURLReceiver: TuneURLReceiver? = null
 
     /* Overrides onCreate from Service */
     override fun onCreate() {
@@ -85,6 +109,7 @@ class PlayerService : MediaLibraryService() {
         // initialize player and session
         initializePlayer()
         initializeSession()
+        registerTuneURLReceiver()
         val notificationProvider: DefaultMediaNotificationProvider = CustomNotificationProvider()
         notificationProvider.setSmallIcon(R.drawable.ic_notification_app_icon_white_24dp)
         setMediaNotificationProvider(notificationProvider)
@@ -99,6 +124,9 @@ class PlayerService : MediaLibraryService() {
         player.removeListener(playerListener)
         player.release()
         mediaLibrarySession.release()
+        unregisterReceiver(tuneURLReceiver)
+        stopScanning()
+        TuneURLManager.stopTuneURLService(applicationContext)
         super.onDestroy()
     }
 
@@ -529,8 +557,10 @@ class PlayerService : MediaLibraryService() {
             //updatePlayerState(station, playbackState)
 
             if (isPlaying) {
+                startDetection()
                 // playback is active
             } else {
+                stopScanning()
                 // cancel sleep timer
                 cancelSleepTimer()
                 // reset metadata
@@ -666,8 +696,54 @@ class PlayerService : MediaLibraryService() {
             intent.putExtra(AudioEffect.EXTRA_AUDIO_SESSION, audioSessionId)
             intent.putExtra(AudioEffect.EXTRA_PACKAGE_NAME, packageName)
             intent.putExtra(AudioEffect.EXTRA_CONTENT_TYPE, AudioEffect.CONTENT_TYPE_MUSIC)
+            intent.setPackage(packageName)
             sendBroadcast(intent)
             // note: remember to broadcast AudioEffect.ACTION_CLOSE_AUDIO_EFFECT_CONTROL_SESSION, when not needed anymore
         }
+    }
+
+    // Tune Url Detection
+    private fun startDetection(){
+        try {
+            val mediaUrl: String? =  player.currentMediaItem?.requestMetadata?.mediaUri.toString()
+//            var mediaUrl: String? = playable.getLocalMediaUrl()
+//            if (mediaUrl == null) {
+//                mediaUrl = playable.getStreamUrl()
+//            }
+
+            TuneURLManager.startScanning(
+                applicationContext,
+                mediaUrl,
+                player.currentPosition * 1000L
+            )
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+    private fun stopScanning(){
+        TuneURLManager.stopScanning(applicationContext)
+    }
+    private fun registerTuneURLReceiver() {
+        tuneURLReceiver = TuneURLReceiver()
+
+        val intentFilter = IntentFilter()
+        intentFilter.addAction(Constants.SEARCH_FINGERPRINT_RESULT_RECEIVED)
+        intentFilter.addAction(Constants.SEARCH_FINGERPRINT_RESULT_ERROR)
+        intentFilter.addAction(Constants.ADD_RECORD_OF_INTEREST_RESULT_RECEIVED)
+        intentFilter.addAction(Constants.ADD_RECORD_OF_INTEREST_RESULT_ERROR)
+        intentFilter.addAction(Constants.POST_POLL_ANSWER_RESULT_RECEIVED)
+        intentFilter.addAction(Constants.POST_POLL_ANSWER_RESULT_ERROR)
+        intentFilter.addAction(Constants.GET_CYOA_RESULT_RECEIVED)
+        intentFilter.addAction(Constants.GET_CYOA_RESULT_ERROR)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            registerReceiver(
+                tuneURLReceiver, intentFilter,
+                Context.RECEIVER_NOT_EXPORTED
+            );
+        } else {
+            registerReceiver(tuneURLReceiver, intentFilter)
+        }
+
     }
 }

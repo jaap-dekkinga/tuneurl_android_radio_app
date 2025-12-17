@@ -1,19 +1,28 @@
 package com.tuneurl.radio
 
 
+import android.app.Activity
 import android.content.ComponentName
+import android.content.Context
 import android.content.Intent
+import android.graphics.drawable.AnimatedVectorDrawable
 import android.media.AudioManager
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.SeekBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.annotation.OptIn
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.isVisible
+import androidx.media3.common.MediaItem
+import androidx.media3.common.PlaybackException
+import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.session.MediaController
 import androidx.media3.session.SessionToken
@@ -34,11 +43,13 @@ import kotlin.math.abs
 
 
 class PlayerActivity : AppCompatActivity() {
-
+    private val TAG: String = PlayerFragment::class.java.simpleName
     private lateinit var controllerFuture: ListenableFuture<MediaController>
     private val controller: MediaController?
         get() = if (controllerFuture.isDone) controllerFuture.get() else null
     private var collection: Collection = Collection()
+
+    private var uuid :String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -55,7 +66,7 @@ class PlayerActivity : AppCompatActivity() {
 
 
         val name = intent.getStringExtra("name")?:""
-        val uuid = intent.getStringExtra("uuid")?:""
+          uuid = intent.getStringExtra("uuid")?:""
         val streamURL = intent.getStringExtra("streamURL")?:""
         val imageURL = intent.getStringExtra("imageURL")?:""
         val desc = intent.getStringExtra("desc")?:""
@@ -79,18 +90,19 @@ class PlayerActivity : AppCompatActivity() {
 //        CollectionHelper.saveCollection(this, collection)
 
         findViewById<ImageButton>(R.id.btnPlayPause).setOnClickListener {
+            togglePlayButton(controller?.isPlaying==true)
             if (controller?.isPlaying == true ) {
                 // stop playback
                 controller?.pause()
-                findViewById<ImageButton>(R.id.btnPlayPause).setImageResource(R.drawable.ic_player_play_symbol_42dp)
-                stopMusicAnimation()
+//                findViewById<ImageButton>(R.id.btnPlayPause).setImageResource(R.drawable.ic_player_play_symbol_42dp)
+//                stopMusicAnimation()
             }
             // CASE: the selected station is not playing (another station might be playing)
             else {
 
                 findViewById<ImageButton>(R.id.btnPlayPause).setImageResource( R.drawable.ic_stop)
                 controller?.play(this, CollectionHelper.getStation(collection, uuid))
-                animateMusicIcon()
+//                animateMusicIcon()
                 // start playback
 //                controller?.play(this, Station(
 //                    uuid = UUID.randomUUID().toString(),
@@ -145,13 +157,13 @@ class PlayerActivity : AppCompatActivity() {
         }*/
 
         musicView = findViewById(R.id.btnPause)
-       CoroutineScope(Dispatchers.IO).launch {
-            delay(1000)
-            withContext(Dispatchers.Main){
-                if(!(controller?.isPlaying?:true)) controller?.play(this@PlayerActivity, CollectionHelper.getStation(collection, uuid))
-            }
-            animateMusicIcon()
-        }
+//       CoroutineScope(Dispatchers.IO).launch {
+//            delay(1000)
+//            withContext(Dispatchers.Main){
+//                if(!(controller?.isPlaying?:true)) controller?.play(this@PlayerActivity, CollectionHelper.getStation(collection, uuid))
+//            }
+//            animateMusicIcon()
+//        }
         initVolume()
 
     }
@@ -253,10 +265,103 @@ class PlayerActivity : AppCompatActivity() {
     /* Sets up the MediaController  */
     private fun setupController() {
         val controller: MediaController = this.controller ?: return
-//        controller.addListener(playerListener)
+        controller.addListener(playerListener)
 //        requestMetadataUpdate()
 //        // handle start intent
-//        handleStartIntent()
+        handleStartIntent()
+    }
+    private fun handleStartIntent() {
+        if ( intent.action != null) {
+            when ( intent.action) {
+                Keys.ACTION_SHOW_PLAYER -> handleShowPlayer()
+                Intent.ACTION_VIEW -> handleViewIntent()
+                Keys.ACTION_START -> handleStartPlayer()
+            }
+        }
+        // clear intent action to prevent double calls
+         intent.action = ""
+    }
+    /* Handles ACTION_SHOW_PLAYER request from notification */
+    private fun handleShowPlayer() {
+        Log.i(TAG, "Tap on notification registered.")
+        // todo implement
+    }
+    /* Handles ACTION_VIEW request to add Station */
+    private fun handleViewIntent() {
+
+    }
+    /* Handles this activity's start intent */
+    private fun handleStartPlayer(){
+        if (intent.hasExtra(Keys.EXTRA_START_LAST_PLAYED_STATION)){
+
+        }else{
+//            if(!(controller?.isPlaying?:true))
+                controller?.play(this@PlayerActivity, CollectionHelper.getStation(collection, uuid))
+
+            togglePlayButton(controller?.isPlaying==true)
+        }
+        animateMusicIcon()
     }
 
+    private var playerListener: Player.Listener = object : Player.Listener {
+
+        override fun onMediaItemTransition(mediaItem: MediaItem?, reason: Int) {
+            super.onMediaItemTransition(mediaItem, reason)
+            // store new station
+//            playerState.stationUuid = mediaItem?.mediaId ?: String()
+//            // update station specific views
+//            updatePlayerViews()
+        }
+
+        override fun onIsPlayingChanged(isPlaying: Boolean) {
+            super.onIsPlayingChanged(isPlaying)
+            // store state of playback
+//            playerState.isPlaying = isPlaying
+            // animate state transition of play button(s)
+//            layout.animatePlaybackButtonStateTransition(activity as Context, isPlaying)
+            togglePlayButton(isPlaying)
+//            layout.updatePlayerViews(activity as Context, station, playerState.isPlaying)
+
+            if (isPlaying) {
+                // playback is active
+//                layout.showPlayer(activity as Context)
+//                layout.showBufferingIndicator(buffering = false)
+            } else {
+                // playback is paused or stopped
+                // check if buffering (playback is not active but playWhenReady is true)
+                if (controller?.playWhenReady == true) {
+                    // playback is buffering, show the buffering indicator
+//                    layout.showBufferingIndicator(buffering = true)
+                } else {
+                    // playback is not buffering, hide the buffering indicator
+//                    layout.showBufferingIndicator(buffering = false)
+                }
+            }
+        }
+
+        override fun onPlayWhenReadyChanged(playWhenReady: Boolean, reason: Int) {
+            super.onPlayWhenReadyChanged(playWhenReady, reason)
+
+            if (playWhenReady && controller?.isPlaying == false) {
+//                layout.showBufferingIndicator(buffering = true)
+            }
+        }
+
+        override fun onPlayerError(error: PlaybackException) {
+            super.onPlayerError(error)
+            togglePlayButton(false)
+//            layout.showBufferingIndicator(false)
+            Toast.makeText(this@PlayerActivity, R.string.toastmessage_connection_failed, Toast.LENGTH_LONG).show()
+        }
+    }
+    fun togglePlayButton(isPlaying: Boolean) {
+        if (!isPlaying) {
+
+            findViewById<ImageButton>(R.id.btnPlayPause).setImageResource(R.drawable.ic_player_play_symbol_42dp)
+            stopMusicAnimation()
+        } else {
+            findViewById<ImageButton>(R.id.btnPlayPause).setImageResource( R.drawable.ic_stop)
+            animateMusicIcon()
+        }
+    }
 }

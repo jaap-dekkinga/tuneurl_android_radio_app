@@ -1,0 +1,15 @@
+ninja: Entering directory `D:\Android\Workspace\TuneURL_SDK\tuneurl_sdk\.cxx\RelWithDebInfo\3j4z2v5o\arm64-v8a'
+[1/14] Building CXX object CMakeFiles/native-lib.dir/FingerprintProperties.cpp.o
+[2/14] Building CXX object CMakeFiles/native-lib.dir/ArrayRankFloat.cpp.o
+[3/14] Building CXX object CMakeFiles/native-lib.dir/Fingerprint.cpp.o
+[4/14] Building CXX object CMakeFiles/native-lib.dir/Spectrogram.cpp.o
+[5/14] Building CXX object CMakeFiles/native-lib.dir/native-lib.cpp.o
+[6/14] Building CXX object CMakeFiles/native-lib.dir/FastFourierTransform.cpp.o
+[7/14] Building CXX object CMakeFiles/native-lib.dir/FingerprintManager.cpp.o
+[8/14] Building CXX object CMakeFiles/native-lib.dir/RobustIntensityProcessor.cpp.o
+[9/14] Building CXX object CMakeFiles/native-lib.dir/FingerprintSimilarityComputer.cpp.o
+[10/14] Building CXX object CMakeFiles/native-lib.dir/MapRankInteger.cpp.o
+[11/14] Building CXX object CMakeFiles/native-lib.dir/WindowFunction.cpp.o
+[12/14] Building CXX object CMakeFiles/native-lib.dir/QuickSortInteger.cpp.o
+[13/14] Building CXX object CMakeFiles/native-lib.dir/PairManager.cpp.o
+[14/14] Linking CXX shared library D:\Android\Workspace\TuneURL_SDK\tuneurl_sdk\build\intermediates\cxx\RelWithDebInfo\3j4z2v5o\obj\arm64-v8a\libnative-lib.so

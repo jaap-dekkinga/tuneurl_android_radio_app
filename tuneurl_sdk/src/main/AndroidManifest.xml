@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dekidea.tuneurl">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:supportsRtl="true">
+
+        <!-- These are TuneURL components -->
+        <service
+            android:name="com.dekidea.tuneurl.service.TuneURLService"
+            android:exported="true"
+            android:foregroundServiceType="mediaPlayback" />
+
+        <service android:name="com.dekidea.tuneurl.service.APIService"
+            android:exported="true"/>
+
+    </application>
+
+</manifest>

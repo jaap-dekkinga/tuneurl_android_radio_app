@@ -1,6 +1,13 @@
 pluginManagement {
     repositories {
-        google()
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        jcenter()
         mavenCentral()
         gradlePluginPortal()
     }
@@ -10,7 +17,11 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        jcenter()
+        maven { url 'https://jitpack.io' }
     }
 }
 
 include ':app'
+
+include ':tuneurl_sdk'

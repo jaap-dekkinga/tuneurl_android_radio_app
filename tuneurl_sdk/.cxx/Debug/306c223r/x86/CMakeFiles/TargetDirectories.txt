@@ -1,0 +1,3 @@
+C:/Users/Macrew/Documents/tuneurl_android_radio_app/tuneurl_sdk/.cxx/Debug/306c223r/x86/CMakeFiles/native-lib.dir
+C:/Users/Macrew/Documents/tuneurl_android_radio_app/tuneurl_sdk/.cxx/Debug/306c223r/x86/CMakeFiles/edit_cache.dir
+C:/Users/Macrew/Documents/tuneurl_android_radio_app/tuneurl_sdk/.cxx/Debug/306c223r/x86/CMakeFiles/rebuild_cache.dir

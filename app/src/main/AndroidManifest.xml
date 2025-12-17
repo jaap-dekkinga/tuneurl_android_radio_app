@@ -39,16 +39,42 @@
             android:exported="false" />
         <!-- Main activity for radio station playback on phone -->
         <activity
-            android:name=".MainActivity"
-            android:configChanges="orientation|screenSize"
-            android:windowSoftInputMode="adjustPan"
+            android:name=".SplashActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true">
-
             <!-- react to main intents -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+        <activity
+            android:name="com.dekidea.tuneurl.activity.TuneURLActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.dekidea.tuneurl.activity.CYOAActivity"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.dekidea.tuneurl.receiver.TuneURLReceiver"
+            android:exported="false">
+
+            <intent-filter>
+                <action android:name="com.jamal2367.urlradio.LISTENING_ACTION" />
+            </intent-filter>
+
+        </receiver>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true">
+
+
 
             <!-- react to be recognized as a music player -->
             <intent-filter>

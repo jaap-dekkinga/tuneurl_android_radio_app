@@ -748,6 +748,9 @@ class PlayerFragment : Fragment(),
             // animate state transition of play button(s)
             layout.animatePlaybackButtonStateTransition(activity as Context, isPlaying)
 
+            layout.togglePlayButton(playerState.isPlaying)
+//            layout.updatePlayerViews(activity as Context, station, playerState.isPlaying)
+
             if (isPlaying) {
                 // playback is active
                 layout.showPlayer(activity as Context)

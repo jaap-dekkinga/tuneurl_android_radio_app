@@ -3,6 +3,13 @@
   [
     {
       "name": "Test TuneURL Station",
+      "streamURL": "https://media.rss.com/tuneurl/20220907_070931_878a5a1ec07e667ceb65aa35ea637cbb.mp3",
+      "imageURL": "test_tune_url",
+      "desc": "http://libretime.tuneurl-demo.com:8000/main",
+      "longDesc": "The app must trigger notification when this station is playing and sound QR is trigerred."
+    },
+    {
+      "name": "Test TuneURL Station",
       "streamURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
       "imageURL": "tune_url",
       "desc": "http://libretime.tuneurl-demo.com:8000/main",

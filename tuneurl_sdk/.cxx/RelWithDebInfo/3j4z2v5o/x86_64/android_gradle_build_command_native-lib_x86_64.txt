@@ -1,0 +1,7 @@
+Executable : D:\Android\sdk\cmake\3.10.2.4988404\bin\ninja.exe
+arguments : 
+-C
+D:\Android\Workspace\TuneURL_SDK\tuneurl_sdk\.cxx\RelWithDebInfo\3j4z2v5o\x86_64
+native-lib
+jvmArgs : 
+
