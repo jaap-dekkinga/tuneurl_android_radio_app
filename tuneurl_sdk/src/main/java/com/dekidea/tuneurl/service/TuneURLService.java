@@ -196,16 +196,17 @@ public class TuneURLService extends Service implements Constants {
 		startService();
 
 		try {
+            if (intent!=null){
+                int action = intent.getIntExtra(TUNEURL_ACTION, -1);
 
-			int action = intent.getIntExtra(TUNEURL_ACTION, -1);
+                if (action == ACTION_START_SCANNING) {
 
-			if (action == ACTION_START_SCANNING) {
+                    String path = intent.getStringExtra("path");
+                    long positionUs = intent.getLongExtra("positionUs", 0);
 
-				String path = intent.getStringExtra("path");
-				long positionUs = intent.getLongExtra("positionUs", 0);
-
-				startScanning(path, positionUs);
-			}
+                    startScanning(path, positionUs);
+                }
+            }
 		}
 		catch (Exception e){
 
@@ -254,7 +255,11 @@ public class TuneURLService extends Service implements Constants {
 				.setCategory(NotificationCompat.CATEGORY_SERVICE)
 				.build();
 
-		startForeground(NOTIFICATION_ID, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            startForeground(NOTIFICATION_ID, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK);
+        }else{
+            startForeground(NOTIFICATION_ID, notification);
+        }
 
 
     }
