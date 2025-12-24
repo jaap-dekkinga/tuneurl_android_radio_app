@@ -4,14 +4,14 @@ apply plugin: 'kotlin-parcelize'
 
 android {
     namespace 'com.tuneurl.radio'
-    compileSdk 34
+    compileSdk 36
 
     defaultConfig {
         applicationId 'com.jamal2367.urlradio'
         minSdk 26
-        targetSdk 34
-        versionCode 128
-        versionName '12.8'
+        targetSdk 36
+        versionCode 129
+        versionName '12.9'
         resourceConfigurations += ['en', 'ar', 'bg', 'cs', 'de', 'el', 'fr', 'hu', 'it', 'nl', 'pl', 'pt', 'ru', 'ro', 'tr', 'uk', 'zh-rCN']
         setProperty('archivesBaseName', 'URL_Radio_' + versionName)
     }
